@@ -20,6 +20,9 @@ public class TimeManager : MonoBehaviour {
 
 	void Update()
 	{
+		if (CurrentGroupIndex >= Controller.Count)
+			return;
+
 		m_totalTime += Time.deltaTime;
 
 		if (m_totalTime > Controller [CurrentGroupIndex].DelyTime) 

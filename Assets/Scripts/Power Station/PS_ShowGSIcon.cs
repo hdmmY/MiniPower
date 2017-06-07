@@ -6,8 +6,6 @@ public class PS_ShowGSIcon : MonoBehaviour {
 
 	public List<GameObject> m_GsLinePoints;
 
-
-
 	private PS_Console _console;
 	private Camera _camera;
 

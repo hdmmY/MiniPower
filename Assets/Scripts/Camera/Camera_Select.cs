@@ -8,7 +8,8 @@ public class Camera_Select : MonoBehaviour {
 
 	public string IndustoryPowerStationTag;
 	public string NormalPowerStationTag;
-	public string BuildingTag;
+	public string IndustoryBuildingTag;
+	public string NormalBuildingTag;
 	public string GenerateStationTag;
 
 	private Camera _camera;
@@ -34,7 +35,7 @@ public class Camera_Select : MonoBehaviour {
 				if (tag == IndustoryPowerStationTag || tag == NormalPowerStationTag) 
 				{
 					hit2D.transform.GetComponent<PS_Console> ().m_Selected = true;
-
+					hit2D.transform.GetComponent<PS_Console> ().CallSelect (Color.white);
 					return;
 				}
 
@@ -43,6 +44,10 @@ public class Camera_Select : MonoBehaviour {
 					hit2D.transform.GetComponent<GS_Console> ().m_Selected = true;
 
 					return;
+				}
+
+				if (tag == IndustoryBuildingTag || tag == NormalBuildingTag) {
+					hit2D.transform.GetComponent<Bd_Console> ().CallSelectEvent (Color.white);
 				}
 			}
 		}

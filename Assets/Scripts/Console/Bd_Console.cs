@@ -12,7 +12,6 @@ public class Bd_Console : MonoBehaviour {
 	private void Start()
 	{
 		m_CurConnected = 0;
-		m_Needed = 1;
 	}
 
 
